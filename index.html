@@ -39,7 +39,7 @@
 
             </g>
             <g id="svgButtons">
-                <a xlink:href="javascript:buttonPressed(0)" id="button1">
+                <a id="button1">
                     <title>Girls, First Floor</title>
                     <rect x="580" y="355" width="100" height="75" fill="#E0D009" />
                     <text>
@@ -47,7 +47,7 @@
                     </text>
                 </a>
 
-                <a xlink:href="javascript:buttonPressed(1)" id="button2">
+                <a id="button2">
                     <title>Boys, First Floor</title>
                     <rect x="870" y="355" width="100" height="75" fill="#2B99E0" />
                     <text>
@@ -56,7 +56,7 @@
                     </text>
                 </a>
 
-                <a xlink:href="javascript:buttonPressed(2)" id="button3">
+                <a id="button3">
                     <title>Girls, Second Floor</title>
                     <rect x="250" y="1810" width="120" height="65" fill="#E0D009" />
                     <text>
@@ -65,7 +65,7 @@
                     </text>
                 </a>
 
-                <a xlink:href="javascript:buttonPressed(3)" id="button4">
+                <a id="button4">
                     <title>All Genders Single User, Second Floor</title>
                     <rect x="250" y="1875" width="80" height="85" fill="#9901E0" />
                     <text text-anchor="middle">
@@ -78,7 +78,7 @@
                     </text>
                 </a>
 
-                <a xlink:href="javascript:buttonPressed(4)" id="button5">
+                <a id="button5">
                     <title>Boys, Second Floor East Wing</title>
                     <rect x="1040" y="2330" width="50" height="45" fill="#E0D009" />
                     <text>
@@ -87,7 +87,7 @@
                     </text>
                 </a>
 
-                <a xlink:href="javascript:buttonPressed(5)" id="button6">
+                <a id="button6">
                     <title>All Genders Single User, Second Floor</title>
                     <rect x="95" y="2090" width="95" height="65" fill="#9901E0" />
                     <text>
@@ -96,7 +96,7 @@
                     </text>
                 </a>
 
-                <a xlink:href="javascript:buttonPressed(6)" id="button7">
+                <a id="button7">
                     <title>Girls, Second Floor East Wing</title>
                     <rect x="980" y="2330" width="55" height="45" fill="#2B99E0" />
                     <text>
@@ -105,7 +105,7 @@
                     </text>
                 </a>
 
-                <a xlink:href="javascript:buttonPressed(7)" id="button8">
+                <a id="button8">
                     <title>Boys, Second Floor</title>
                     <rect x="575" y="2550" width="80" height="70" fill="#2B99E0" />
                     <text text-anchor="middle">
@@ -114,7 +114,7 @@
                     </text>
                 </a>
 
-                <a xlink:href="javascript:buttonPressed(8)" id="button9">
+                <a id="button9">
                     <title>Boys, Second Floor</title>
                     <rect x="580" y="1810" width="70" height="65" fill="#2B99E0" />
                     <text>
@@ -123,7 +123,7 @@
                     </text>
                 </a>
 
-                <a xlink:href="javascript:buttonPressed(9)" id="button10">
+                <a id="button10">
                     <title>Boys, Third Floor East Wing</title>
                     <rect x="1020" y="3745" width="50" height="45" fill="#2B99E0" />
                     <text>
@@ -131,7 +131,7 @@
                     </text>
                 </a>
 
-                <a xlink:href="javascript:buttonPressed(10)" id="button11">
+                <a id="button11">
                     <title>Girls, Third Floor East Wing</title>
                     <rect x="1060" y="3745" width="55" height="48" fill="#E0D009" />
                     <text>
@@ -139,7 +139,7 @@
                     </text>
                 </a>
 
-                <a xlink:href="javascript:buttonPressed(11)" id="button12">
+                <a id="button12">
                     <title>All Genders, Second Floor</title>
                     <rect x="250" y="2550" width="110" height="70" fill="#E08300" />
                     <text text-anchor="middle">
@@ -148,7 +148,7 @@
                     </text>
                 </a>
 
-                <a xlink:href="javascript:buttonPressed(12)" id="button13">
+                <a id="button13">
                     <title>Girls, Third Floor</title>
                     <rect x="265" y="3240" width="110" height="60" fill="#E0D009" />
                     <text>
@@ -156,7 +156,7 @@
                     </text>
                 </a>
 
-                <a xlink:href="javascript:buttonPressed(13)" id="button14">
+                <a id="button14">
                     <title>Boys, Third Floor</title>
                     <rect x="590" y="3240" width="85" height="60" fill="#2B99E0" />
                     <text>
@@ -722,13 +722,12 @@
     </div>
     <div>
         <div class="bottomButtonHolder">
-            <button onclick="submitFeedback()" , id="feedbackButton"><i class="fa-regular fa-comment"></i></i></button>
-            <button onclick="promptRoomHighlight()" , id="highlightRoomButton"><i
-                    class="fa-solid fa-magnifying-glass"></i></button>
+            <button id="feedbackButton">feedback</button>
+            <button id="highlightRoomButton">highlight</button>
         </div>
 
         <div class="bottomSubmit">
-            <button onclick="submitData()" , id="submitButton"><i class="fa-solid fa-check"></i> (0)</button>
+            <button id="submitButton">submit (0)</button>
         </div>
 
     </div>
@@ -737,7 +736,5 @@
     </div>
 </body>
 <script type="text/javascript" src="update.js"></script>
-<!-- <script src="/js/navbar.js"></script> -->
-</script>
 
 </html>

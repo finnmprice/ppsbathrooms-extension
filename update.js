@@ -49,7 +49,7 @@ function buttonPressed(brNumber) {
     } else if (numDiff == 0) {
         $("#submitButton").fadeOut(fadeSpeed);
     }
-    document.getElementById("submitButton").innerHTML = "<i class=\"fa-solid fa-check\"></i> (" + numDiff + ")";
+    document.getElementById("submitButton").innerHTML = "submit (" + numDiff + ")";
 }
 
 function submitData() {
@@ -170,3 +170,32 @@ function submitFeedback() {
     });
     alert("Thank you for helping us improve ppsbathrooms!")
 }
+
+
+$("#button1").click(function() {buttonPressed(0);});
+$("#button2").click(function() {buttonPressed(1);});
+$("#button3").click(function() {buttonPressed(2);});
+$("#button4").click(function() {buttonPressed(3);});
+$("#button5").click(function() {buttonPressed(4);});
+$("#button6").click(function() {buttonPressed(5);});
+$("#button7").click(function() {buttonPressed(6);});
+$("#button8").click(function() {buttonPressed(7);});
+$("#button9").click(function() {buttonPressed(8);});
+$("#button10").click(function() {buttonPressed(9);});
+$("#button11").click(function() {buttonPressed(10);});
+$("#button12").click(function() {buttonPressed(11);});
+$("#button13").click(function() {buttonPressed(12);});
+$("#button14").click(function() {buttonPressed(13);});
+
+
+$("#feedbackButton").click(function() {
+    submitFeedback();
+});
+
+$("#highlightRoomButton").click(function() {
+    promptRoomHighlight();
+});
+
+$("#bottomSubmit").click(function() {
+    submitData();
+});
