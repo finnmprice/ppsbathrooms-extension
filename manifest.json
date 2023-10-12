@@ -1,0 +1,19 @@
+{
+    "name": "PPS BATHROOMS",
+    "description": "Cleveland High School's ppsbathrooms status extension, improving student's lives since 1996.",
+    "version": "1.0.7",
+
+    "icons": {
+        "128": "images/icon128.png",
+        "256": "images/icon256.png",
+        "512": "images/icon512.png"
+    },
+    "incognito": "split",
+    "permissions": [
+        "storage"
+    ],
+    "action":{
+        "default_popup": "index.html"
+    },
+    "manifest_version": 3
+}
