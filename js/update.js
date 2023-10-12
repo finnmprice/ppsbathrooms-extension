@@ -140,13 +140,13 @@ function promptRoomHighlight() {
         else {
             notHighlighted = false;
             removeHighlight = document.getElementById("highlightRoomButton");
-            removeHighlight.innerHTML = "x";
+            removeHighlight.innerHTML = "<img src='/icons/x.svg'>";
             toggleBathrooms(false);
         }
     }
     else {
         notHighlighted = true;
-        document.getElementById("highlightRoomButton").innerHTML = "highlight";
+        document.getElementById("highlightRoomButton").innerHTML = "<img src='/icons/find.svg'>";
         $("#cancelHighlightButton").fadeOut(100);
         $("#highlight").fadeOut(250);
         $("#triHighlight").fadeOut(250);

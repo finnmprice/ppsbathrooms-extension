@@ -40,7 +40,7 @@ body {
 @media screen and (max-width: 600px) {
     .bottomButtonHolder {
         left: 50%;
-        margin-left: -80px;
+        margin-left: -50px;
     }
 
     .bottomButtonHolderF {
@@ -224,8 +224,7 @@ body {
 }
 
 .logoHolder {
-    top: 20px;
-    position: absolute;
+    margin-top: 20px;
     width: 100%;
     display: flex;
     justify-content: center;
@@ -477,4 +476,14 @@ body {
 
 #svgButtons {
     cursor: pointer;
+}
+
+#feedbackButton img, #highlightRoomButton img, #highlightRoomButton img {
+    width:  12px;
+    height: 12px;
+}
+
+#feedbackButton, #highlightRoomButton, #highlightRoomButton {
+    width:  32px;
+    height: 32px;
 }
