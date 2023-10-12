@@ -40,7 +40,7 @@ body {
 @media screen and (max-width: 600px) {
     .bottomButtonHolder {
         left: 50%;
-        margin-left: -37.5px;
+        margin-left: -80px;
     }
 
     .bottomButtonHolderF {
@@ -473,4 +473,8 @@ body {
 
 .fartClub span {
     font-size: 12px;
+}
+
+#svgButtons {
+    cursor: pointer;
 }
