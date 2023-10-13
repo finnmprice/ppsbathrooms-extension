@@ -3,15 +3,37 @@ $('#footerText').innerHTML = "© sid collective 2023  |  v" + manifestData.versi
 
 
 function buttonPressed(brNumber) {
-    newData[brNumber] = (newData[brNumber] + 1) % 2;
-    setStatus(brNumber, newData[brNumber]);
+    newData = getBrData();
+    console.log(newData)
+    newDataSingle = getBrData(brNumber);
+    console.log(newDataSingle)
+    switch(newDataSingle) {
+        case true:
+            newDataSingle = 1;
+            break;
+        case false:
+            newDataSingle = 0;
+            break;
+    }
+
+    console.log(newDataSingle)
+
+    newData[brNumber] = (!newDataSingle);
+
+
+    console.log(newDataSingle)
+
 
     var numDiff = 0;
     for (var i = 0; i < 14; i++) {
-        if ((brData[i] != newData[i])) {
+        if ((newData[i] != newDataSingle)) {
             numDiff++;
         }
     }
+    setStatus(brNumber, newDataSingle);
+
+    console.log(numDiff)
+
     var fadeSpeed = 100;
     if (numDiff > 0 && $("#submitButton").is(":hidden")) {
         $("#submitButton").fadeIn(fadeSpeed);
@@ -36,6 +58,8 @@ function submitData() {
             function (data, status) {
             });
     });
+
+    // numDiff = 0;
 }
 
 $("#highlight").fadeOut(0);
