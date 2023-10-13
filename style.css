@@ -487,3 +487,8 @@ body {
     width:  32px;
     height: 32px;
 }
+
+#svgBathrooms {
+    display: none;
+    cursor: pointer;
+}

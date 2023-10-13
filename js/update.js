@@ -1,37 +1,6 @@
-// BATHROOM OPEN/CLOSE DATA
+var manifestData = chrome.runtime.getManifest();
+$('#footerText').innerHTML = "© sid collective 2023  |  v" + manifestData.version;
 
-// yoink br data
-var brData = "<%= brData %>";
-console.log(brData);
-
-// Convert brData string from server into an array of booligans
-brData = brData.split(','); // split into array of strings
-brData = Array.from(brData, Number); // make strings ints
-console.log(brData);
-
-
-// for (var i = 0; i < brData.length; i++) { // make ints booligans
-//   brData[i] = brData[i] > 0;
-// }
-var newData = [...brData]; // copy as value type
-
-// Take data from array and display it on map
-function setStatus(brNumber, status) {
-    if (status === 1) {
-        $('#br' + brNumber.toString()).css({ fill: "#32A848", transition: "0.25s" }); //green
-    }
-    else if (status === 0) {
-        $('#br' + brNumber.toString()).css({ fill: "#CC2825", transition: "0.25s" }); //red
-    }
-    else {
-        document.getElementById("br" + brNumber.toString()).style.fill = "#00FFFF"; //blue
-    }
-}
-
-// Set color of squares
-for (var i = 0; i < 14; i++) {
-    setStatus(i, brData[i]);
-}
 
 function buttonPressed(brNumber) {
     newData[brNumber] = (newData[brNumber] + 1) % 2;
@@ -109,10 +78,8 @@ function highlightRoom(roomNum) {
             .setAttribute("points",
                 roomData.x1.toString() + "," + roomData.y1.toString() + "," + roomData.x2.toString() + "," + roomData.y2.toString() + "," + roomData.x3.toString() + "," + roomData.y3.toString());
 
-
         $("#highlight").fadeOut(250);
         $("#triHighlight").fadeIn(250);
-
     }
     else {
         $("#highlight").fadeIn(250);
