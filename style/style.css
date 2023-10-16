@@ -493,7 +493,7 @@ body {
 }
 
 
-.settingsButton {
+#settingsButton {
     background: none;
     border: none;
     padding: 5px;
@@ -504,44 +504,68 @@ body {
     right: 15px;
 }
 
-.settingsButton img {
+#settingsButton img {
     width:  16px;
     height: 16px;
 }
 
+.center {
+    display: flex;
+    width: 100vw;
+    height: 100vh;
+    padding: 0;
+    margin: 0;
+    justify-content: center;
+}
+
 .settings {
     position: fixed;
-    top: 20px;
-    width: 100%;
-    height: 100%;
-    display: flex;
-    justify-content: center;
-    align-items: center;
+    background-color: #333;
+    width: 300px;
+    height: 100px;
+    top: 100px;
+    border-radius: 10px;
+    z-index: 999;
+    font-family: monospace;
+    box-shadow: 1px 2px 2px rgba(0, 0, 0, .2);
     display: none;
 }
 
 .settingsInternal {
-    height: 300px;
-    width: 200px;
-
-    background-color: #212121;
-    border-radius: 10px;
-    padding-left: 10px;
-    padding-right: 10px;
+    padding: 0;
+    margin: 10px;
+    margin-left: 15px;
+    margin-right: 15px;
+    color: #fff;
+    font-size: 16px;
 }
 
 .settingsInternal h1 {
     text-align: center;
+    font-size: 16px;
 }
 
 #schoolDropdown {
     background: none;
     color: #fff;
-    font-family: monospaceNew;
+    font-family: monospace;
     border: none;
 }
 
 #schoolDropdown option {
     background-color: #111;
     border: none;
+}
+
+#settingsExit {
+    float: right;
+    margin: 0px;
+    padding: 0px;
+    text-decoration: none;
+    border: none;
+    background: none;
+    color: #fff;
+    cursor: pointer;
+    width:  16px;
+    height: 16px;
 }

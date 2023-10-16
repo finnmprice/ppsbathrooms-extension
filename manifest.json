@@ -13,7 +13,7 @@
         "storage"
     ],
     "action":{
-        "default_popup": "/html/chs.html"
+        "default_popup": "/html/base.html"
     },
     "manifest_version": 3
 }

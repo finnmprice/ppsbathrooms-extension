@@ -1,6 +1,4 @@
-var manifestData = chrome.runtime.getManifest();
-$('#footerText').innerHTML = "© sid collective 2023  |  v" + manifestData.version;
-
+$('#footerText').html("© sid collective 2023  |  v" + chrome.runtime.getManifest().version);
 
 function buttonPressed(brNumber) {
     newData = getBrData();
@@ -193,6 +191,23 @@ function submitFeedback() {
 
 
 $('#schoolDropdown').on('input', function() {
-  console.log(this.value);
   chrome.storage.local.set({ school: this.value });
+  console.log("school set as " + this.value);
+});
+
+$("#settingsButton").click(function(){
+  $(".settings").fadeToggle(100);
+});
+
+$("#settingsExit").click(function(){
+  $(".settings").fadeOut(100);
+});
+
+
+chrome.storage.local.get(["school"]).then((result) => {
+  school = result.school;
+  console.log("school got as " + school)
+  if (school == undefined)
+    school = "chs";
+  $("#schoolDropdown").val(school);
 });
