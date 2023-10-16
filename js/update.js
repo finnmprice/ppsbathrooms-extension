@@ -16,12 +16,12 @@ function buttonPressed(brNumber) {
             break;
     }
 
-    console.log(newDataSingle)
+    // console.log(newDataSingle)
 
     newData[brNumber] = (!newDataSingle);
 
 
-    console.log(newDataSingle)
+    // console.log(newDataSingle)
 
 
     var numDiff = 0;
@@ -190,3 +190,9 @@ function submitFeedback() {
 // $("#submitButton").click(function() {
 //     submitData();
 // });
+
+
+$('#schoolDropdown').on('input', function() {
+  console.log(this.value);
+  chrome.storage.local.set({ school: this.value });
+});
