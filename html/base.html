@@ -7,6 +7,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta name="description" content="Status of bathrooms in Portland Public Schools">
     <link rel="stylesheet" href="/style/style.css">
+    <script src="/thirdParty/jquery.min.js"></script>
 
     <title>ppsbathrooms</title>
 
@@ -19,18 +20,21 @@
             <p>please select your school</p>
         </div>
         <div class="imageHolder">
-            <div class="cleveland">
-                <a href="/html/chs.html"><img src="/style/images/logos/clevelandLogo.png"></img></a>
+            <button class="cleveland">
+                <img src="/style/images/logos/clevelandLogo.png"></img>
                 <p>cleveland</p>
-            </div>
-            <div class="franklin">
-                <a href="/html/fhs.html"><img src="/style/images/logos/franklinLogo.png"></img></a>
+            </button>
+            <button class="franklin">
+                <img src="/style/images/logos/franklinLogo.png"></img>
                 <p>franklin</p>
-            </div>
-            <div class="ida">
-                <a href="/html/ihs.html"><img src="/style/images/logos/idaLogo.png"></img></a>
+            </button>
+            <button class="ida">
+                <img src="/style/images/logos/idaLogo.png"></img>
                 <p>wells</p>
-            </div>
+            </button>
+        </div>
+        <div id="bottomText">
+            <p>you can change your school in the settings</p>
         </div>
     </div>
     <style>
@@ -73,6 +77,13 @@
             font-size: 24px;
             text-align: center;
             margin-top: 24px;
+        }
+        .cleveland, .franklin, .ida {
+            cursor: pointer;
+            font-family: monospace;
+            background: none;
+            padding: 0;
+            border: 0;
         }
     </style>
     <script src="/js/setSchool.js"></script>
