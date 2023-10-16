@@ -10,7 +10,7 @@ function makeHttpObject() {
 }
 
 var request = makeHttpObject();
-request.open("GET", "https://www.ppsbathrooms.org/data.json", true);
+request.open("GET", "https://www.ppsbathrooms.org/chsdata.json", true);
 request.send(null);
 request.onreadystatechange = function() {
 
