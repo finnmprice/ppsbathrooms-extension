@@ -474,9 +474,9 @@ body {
     font-size: 12px;
 }
 
-#svgButtons {
+/* #svgButtons {
     cursor: pointer;
-}
+} */
 
 #feedbackButton img, #highlightRoomButton img, #highlightRoomButton img {
     width:  12px;
@@ -490,5 +490,5 @@ body {
 
 #svgBathrooms {
     display: none;
-    cursor: pointer;
+    /* cursor: pointer; */
 }

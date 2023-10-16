@@ -163,30 +163,30 @@ function submitFeedback() {
 }
 
 
-$("#button1, #square1").click(function() {buttonPressed(0);});
-$("#button2, #square2").click(function() {buttonPressed(1);});
-$("#button3, #square3").click(function() {buttonPressed(2);});
-$("#button4, #square4").click(function() {buttonPressed(3);});
-$("#button5, #square5").click(function() {buttonPressed(4);});
-$("#button6, #square6").click(function() {buttonPressed(5);});
-$("#button7, #square7").click(function() {buttonPressed(6);});
-$("#button8, #square8").click(function() {buttonPressed(7);});
-$("#button9, #square9").click(function() {buttonPressed(8);});
-$("#button10, #square10").click(function() {buttonPressed(9);});
-$("#button11, #square11").click(function() {buttonPressed(10);});
-$("#button12, #square12").click(function() {buttonPressed(11);});
-$("#button13, #square13").click(function() {buttonPressed(12);});
-$("#button14, #square14").click(function() {buttonPressed(13);});
+// $("#button1, #square1").click(function() {buttonPressed(0);});
+// $("#button2, #square2").click(function() {buttonPressed(1);});
+// $("#button3, #square3").click(function() {buttonPressed(2);});
+// $("#button4, #square4").click(function() {buttonPressed(3);});
+// $("#button5, #square5").click(function() {buttonPressed(4);});
+// $("#button6, #square6").click(function() {buttonPressed(5);});
+// $("#button7, #square7").click(function() {buttonPressed(6);});
+// $("#button8, #square8").click(function() {buttonPressed(7);});
+// $("#button9, #square9").click(function() {buttonPressed(8);});
+// $("#button10, #square10").click(function() {buttonPressed(9);});
+// $("#button11, #square11").click(function() {buttonPressed(10);});
+// $("#button12, #square12").click(function() {buttonPressed(11);});
+// $("#button13, #square13").click(function() {buttonPressed(12);});
+// $("#button14, #square14").click(function() {buttonPressed(13);});
 
 
-$("#feedbackButton").click(function() {
-    submitFeedback();
-});
+// $("#feedbackButton").click(function() {
+//     submitFeedback();
+// });
 
-$("#highlightRoomButton").click(function() {
-    promptRoomHighlight();
-});
+// $("#highlightRoomButton").click(function() {
+//     promptRoomHighlight();
+// });
 
-$("#submitButton").click(function() {
-    submitData();
-});
+// $("#submitButton").click(function() {
+//     submitData();
+// });
