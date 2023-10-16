@@ -192,7 +192,8 @@ function submitFeedback() {
 
 $('#schoolDropdown').on('input', function() {
   chrome.storage.local.set({ school: this.value });
-  console.log("school set as " + this.value);
+  window.location.replace(this.value + ".html");
+
 });
 
 $("#settingsButton").click(function(){
