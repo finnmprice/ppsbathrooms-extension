@@ -567,3 +567,12 @@ body {
     width:  16px;
     height: 16px;
 }
+
+#noInternet{
+    position: fixed;
+    top:  20px;
+    left: 20px;
+    width:  24px;
+    height: 24px;
+    display: none;
+}

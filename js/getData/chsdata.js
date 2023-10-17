@@ -21,9 +21,16 @@ request.onreadystatechange = function() {
         // for (var i = 0; i < brData.length; i++) { // make ints booligans
         //     brData[i] = brData[i] > 0;
         // }
-        for (var i = 0; i < 14; i++) {
-            setStatus(i, brData[i]);
+        if (navigator.onLine) {newStatus = brData}
+        else {
+            newStatus = -1;
+            $('#noInternet').show();
         }
+
+        for (var i = 0; i < 14; i++) {
+            setStatus(i, newStatus[i]);
+        }
+
         $("#svgBathrooms").fadeIn(100);
     }
 };

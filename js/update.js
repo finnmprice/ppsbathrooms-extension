@@ -207,7 +207,6 @@ $("#settingsExit").click(function(){
 
 chrome.storage.local.get(["school"]).then((result) => {
   school = result.school;
-  console.log("school got as " + school)
   if (school == undefined)
     school = "chs";
   $("#schoolDropdown").val(school);
