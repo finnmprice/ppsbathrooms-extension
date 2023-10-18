@@ -577,7 +577,7 @@ body {
     height: 20px;
     display: none;
 }
-#noWifiText {
+#errorMessage {
     color: #ff0000;
     padding: 0;
     margin: 0;

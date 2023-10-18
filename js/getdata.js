@@ -53,5 +53,10 @@ function getBrData(brNumber) {
 
 function noWifi() {
     $('#noInternet').show();
-    $('#noWifiText').show();
+    showError('no internet connection');
+}
+
+function showError(error) {
+    $('#errorMessage').show();
+    $('#errorMessage').html('ERROR: ' + error);
 }
