@@ -8,10 +8,10 @@ request.onreadystatechange = function() {
         brData.length = 1; 
         brData = brData.toString().split(','); 
 
-        if (navigator.onLine) {newStatus = brData}
+        if (!navigator.onLine) {newStatus = brData}
         else {
             newStatus = -1;
-            $('#noInternet').show();
+            noWifi();
         }
 
         for (var i = 0; i < 14; i++) {
@@ -35,11 +35,11 @@ function makeHttpObject() {
 
 function setStatus(brNumber, status) {
     if (status == 1) {
-        $("#br" + brNumber.toString()).css({ fill: '#32A848'}); //green
+        $("#br" + brNumber.toString()).css({ fill: '#32A848'}); 
     } else if (status == 0) {
-        $("#br" + brNumber.toString()).css({ fill: '#CC2825'}); //red
+        $("#br" + brNumber.toString()).css({ fill: '#CC2825'}); 
     } else {
-        $("#br" + brNumber.toString()).css({ fill: '#00FFFF'}); //transparent
+        $("#br" + brNumber.toString()).css({ fill: '#75B9FA'}); 
     }
 
 }
@@ -49,4 +49,9 @@ function getBrData(brNumber) {
         return brData[brNumber];
     else
         return brData;
+}
+
+function noWifi() {
+    $('#noInternet').show();
+    $('#noWifiText').show();
 }
