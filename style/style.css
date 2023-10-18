@@ -575,8 +575,23 @@ body {
     right: 20px;
     width:  20px;
     height: 20px;
+    filter: drop-shadow(0px 0px 10px rgb(255 0 0 / 1));
     display: none;
+    z-index: 3;
 }
+
+#noInternetGlow {
+    background-color: rgba(255, 0, 0, 1);
+    width:  20px;
+    height: 20px;
+    position: fixed;
+    right: 20px;
+    top:   20px;
+    filter: blur(35px);
+    display: none;
+    z-index: 2;
+}
+
 #errorMessage {
     color: #ff0000;
     padding: 0;

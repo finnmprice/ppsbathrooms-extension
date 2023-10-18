@@ -2,7 +2,6 @@ var request = makeHttpObject();
 request.open("GET", "https://www.ppsbathrooms.org/" + $("#pageID").html() + "data.json", true);
 request.send(null);
 request.onreadystatechange = function() {
-
     if (request.readyState == 4) {
         brData = request.responseText;
         brData.length = 1; 
@@ -53,6 +52,7 @@ function getBrData(brNumber) {
 
 function noWifi() {
     $('#noInternet').show();
+    $('#noInternetGlow').show();
     showError('no internet connection');
 }
 

@@ -1,7 +1,7 @@
 {
     "name": "PPS BATHROOMS",
     "description": "PPS's bathroom status extension, improving student's lives since 1996.",
-    "version": "1.0.8",
+    "version": "1.0.10",
 
     "icons": {
         "128": "/style/images/icon128.png",
