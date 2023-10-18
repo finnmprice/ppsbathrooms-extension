@@ -1,4 +1,26 @@
-var online = navigator.onLine;
+var request = makeHttpObject();
+request.open("GET", "https://www.ppsbathrooms.org/" + $("#pageID").html() + "data.json", true);
+request.send(null);
+request.onreadystatechange = function() {
+
+    if (request.readyState == 4) {
+        brData = request.responseText;
+        brData.length = 1; 
+        brData = brData.toString().split(','); 
+
+        if (navigator.onLine) {newStatus = brData}
+        else {
+            newStatus = -1;
+            $('#noInternet').show();
+        }
+
+        for (var i = 0; i < 14; i++) {
+            setStatus(i, newStatus[i]);
+        }
+
+        $("#svgBathrooms").fadeIn(100);
+    }
+};
 
 function makeHttpObject() {
   try {return new XMLHttpRequest();}
@@ -11,32 +33,6 @@ function makeHttpObject() {
   throw new Error("Could not create HTTP request object.");
 }
 
-var request = makeHttpObject();
-request.open("GET", "https://www.ppsbathrooms.org/ihsdata.json", true);
-request.send(null);
-request.onreadystatechange = function() {
-
-    if (request.readyState == 4) {
-        brData = request.responseText; //only values
-        brData.length = 1; //set length
-        brData = brData.toString().split(','); //to string and seperate each number
-        // for (var i = 0; i < brData.length; i++) { // make ints booligans
-        //     brData[i] = brData[i] > 0;
-        // }
-        if (navigator.onLine) {newStatus = brData}
-        else {
-            newStatus = -1;
-            $('#noInternet').show();
-        }
-
-        for (var i = 0; i < 14; i++) {
-            setStatus(i, newStatus[i]);
-        }
-        $("#svgBathrooms").fadeIn(100);
-    }
-};
-
-// Set color of squares
 function setStatus(brNumber, status) {
     if (status == 1) {
         $("#br" + brNumber.toString()).css({ fill: '#32A848'}); //green
