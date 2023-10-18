@@ -8,7 +8,7 @@ request.onreadystatechange = function() {
         brData.length = 1; 
         brData = brData.toString().split(','); 
 
-        if (!navigator.onLine) {newStatus = brData}
+        if (navigator.onLine) {newStatus = brData}
         else {
             newStatus = -1;
             noWifi();
