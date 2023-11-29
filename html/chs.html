@@ -4,8 +4,9 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=0" />
-    <link rel="stylesheet" href="/style/style.css"></link>
-    
+    <link rel="stylesheet" href="/style/style.css">
+    </link>
+
     <script src="/thirdParty/jquery.min.js"></script>
 </head>
 
@@ -13,7 +14,7 @@
     <p id="pageID">chs</p>
 
     <div class="logoHolder">
-        <a href="/html/schools.html">cleveland</a>
+        <a id="schoolSelect">cleveland</a>
     </div>
 
     <div class="mapTopSpace"></div>
@@ -717,37 +718,8 @@
 
     </div>
 
-    <button id="settingsButton"><img src="/style/icons/settings.svg"></img></button>
+    <div id="settings"></div>
 
-    <div class="center">
-        <div class="settings">
-            <div class="settingsInternal">
-                <button id="settingsExit"><img src="/style/icons/x.svg"></img></button>
-                <h1>settings</h1>
-                <div class="schoolDropdown">
-                    <label style="font-size: 12px;" for="schoolDropdown">school </label>
-                    <select name="schoolDropdown" id="schoolDropdown">
-                        <option value="chs">cleveland </option>
-                        <option value="fhs">franklin </option>
-                        <option value="ihs">ida </option>
-                    </select>
-                </div>
-                <p id="errorMessage"></p>
-            </div>
-        </div>
-    </div>
-
-    <!-- <div>
-        <div class="bottomButtonHolder">
-            <button id="feedbackButton"><img src="/style/icons/feedback.svg"></img></button>
-            <button id="highlightRoomButton"><img src="/style/icons/find.svg"></img></button>
-        </div>
-
-        <div class="bottomSubmit">
-            <button id="submitButton">submit (0)</button>
-        </div>
-
-    </div> -->
     <div class="footer">
         <p id="footerText">© sid collective 2023</p>
     </div>
@@ -755,4 +727,5 @@
 <script type="text/javascript" src="/js/update.js"></script>
 <script type="text/javascript" src="/js/roomData.js"></script>
 <script type="text/javascript" src="/js/getdata.js"></script>
+
 </html>

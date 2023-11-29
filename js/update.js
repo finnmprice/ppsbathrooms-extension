@@ -1,4 +1,29 @@
 $('#footerText').html("© sid collective 2023  |  v" + chrome.runtime.getManifest().version);
+$('#settings').html(`
+    <button id="settingsButton"><img src="/style/icons/settings.svg"></img></button>
+
+    <div class="center">
+        <div class="settings">
+            <div class="settingsInternal">
+                <button id="settingsExit"><img src="/style/icons/x.svg"></img></button>
+                <h1>settings</h1>
+                <div class="schoolDropdown">
+                    <label style="font-size: 12px;" for="schoolDropdown">school </label>
+                    <select name="schoolDropdown" id="schoolDropdown">
+                        <option value="chs">cleveland </option>
+                        <option value="fhs">franklin </option>
+                        <option value="ihs">ida </option>
+                    </select>
+                </div>
+                <p id="errorMessage"></p>
+            </div>
+        </div>
+    </div>
+`);
+
+$("#schoolSelect").click(function() {
+    window.location.replace("base.html?fromSchool=true");
+});
 
 function buttonPressed(brNumber) {
     newData = getBrData();

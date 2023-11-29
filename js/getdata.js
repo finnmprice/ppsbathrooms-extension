@@ -1,36 +1,39 @@
-var request = makeHttpObject();
-request.open("GET", "https://www.ppsbathrooms.org/" + $("#pageID").html() + "data.json", true);
-request.send(null);
-request.onreadystatechange = function() {
-    if (request.readyState == 4) {
-        brData = request.responseText;
-        brData.length = 1; 
-        brData = brData.toString().split(','); 
+pageId = getId();
 
-        if (navigator.onLine) {newStatus = brData}
-        else {
-            newStatus = -1;
-            noWifi();
-        }
-
-        for (var i = 0; i < 14; i++) {
-            setStatus(i, newStatus[i]);
-        }
-
-        $("#svgBathrooms").fadeIn(100);
+function getId() {
+    switch ($('#pageID').html()) {
+        case 'chs':
+            return 0;
+        case 'fhs':
+            return 1;
+        case 'ihs':
+            return 2;
     }
-};
-
-function makeHttpObject() {
-  try {return new XMLHttpRequest();}
-  catch (error) {}
-  try {return new ActiveXObject("Msxml2.XMLHTTP");}
-  catch (error) {}
-  try {return new ActiveXObject("Microsoft.XMLHTTP");}
-  catch (error) {}
-
-  throw new Error("Could not create HTTP request object.");
 }
+
+fetch('http://ppsbathrooms.org/data.json')
+  .then(response => {
+    if (!response.ok) {
+      throw new Error('Network response was not ok');
+    }
+    return response.json();
+  })
+  .then(data => {
+    newData = data[pageId].split(',')
+    if (navigator.onLine) {newStatus = newData}
+    else {
+        newStatus = -1;
+        noWifi();
+    }
+
+    for (var i = 0; i < 36; i++) {
+        setStatus(i, newStatus[i]);
+    }
+    $("#svgBathrooms").fadeIn(100);
+  })
+  .catch(error => {
+    console.error('Error fetching data:', error);
+  });
 
 function setStatus(brNumber, status) {
     if (status == 1) {
@@ -40,7 +43,6 @@ function setStatus(brNumber, status) {
     } else {
         $("#br" + brNumber.toString()).css({ fill: '#75B9FA'}); 
     }
-
 }
 
 function getBrData(brNumber) {

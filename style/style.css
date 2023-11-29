@@ -204,11 +204,6 @@ body {
     margin-bottom: 50px;
     margin-right: 25px;
     margin-left: 25px;
-
-    -webkit-user-select: none;
-    -moz-user-select: none;
-    -ms-user-select: none;
-    user-select: none;
 }
 
 .mapHolder {
@@ -473,10 +468,6 @@ body {
     font-size: 12px;
 }
 
-/* #svgButtons {
-    cursor: pointer;
-} */
-
 #feedbackButton img, #highlightRoomButton img, #highlightRoomButton img {
     width:  12px;
     height: 12px;
@@ -489,11 +480,11 @@ body {
 
 #svgBathrooms {
     display: none;
-    /* cursor: pointer; */
 }
 
 
 #settingsButton {
+    user-select: none;
     background: none;
     border: none;
     padding: 5px;
@@ -505,6 +496,7 @@ body {
 }
 
 #settingsButton img {
+    filter: drop-shadow(0px 0px 6px rgba(0, 0, 0, 1));
     width:  16px;
     height: 16px;
 }
@@ -567,6 +559,10 @@ body {
     cursor: pointer;
     width:  16px;
     height: 16px;
+}
+
+#schoolSelect {
+    cursor: pointer;
 }
 
 #noInternet{
